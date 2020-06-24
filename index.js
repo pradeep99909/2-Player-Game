@@ -1,5 +1,6 @@
 const readline = require("readline");
 const minimax = require("./minmax");
+const { Console } = require("console");
 
 var player = +1;
 
@@ -28,14 +29,17 @@ rl.question("Initial row ? ", function (val) {
     let minmax = minimax(0, 0, true, values, 1);
     if (player_playing == -1) {
       player_A.push(minmax);
+      console.log("Player A picks" + minmax);
     } else {
       player_B.push(minmax);
+      console.log("Player B picks" + minmax);
     }
 
     val = [
       ...val.slice(0, val.indexOf(minmax)),
       ...val.slice(val.indexOf(minmax) + 1, val.length),
     ];
+    console.log();
     player_playing = selecting_player(player_playing);
   }
 
