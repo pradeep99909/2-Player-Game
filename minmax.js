@@ -1,5 +1,4 @@
 const minimax = (curDepth, nodeIndex, maxTurn, scores, targetDepth) => {
-  // base case  targetDepth reached
   if (curDepth == targetDepth) {
     return scores[nodeIndex];
   }
