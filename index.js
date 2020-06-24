@@ -39,7 +39,6 @@ rl.question("Initial row ? ", function (val) {
       ...val.slice(0, val.indexOf(minmax)),
       ...val.slice(val.indexOf(minmax) + 1, val.length),
     ];
-    console.log();
     player_playing = selecting_player(player_playing);
   }
 
